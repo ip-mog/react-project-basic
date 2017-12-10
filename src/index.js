@@ -1,20 +1,25 @@
-import _ from "lodash";
-import "./style.css";
-import Icon from "./icon.png";
+import React from "react";
+import ReactDOM from "react-dom";
 
-function component() {
-  var element = document.createElement("div");
+ReactDOM.render(<div>hello everyone</div>, document.getElementById("root"));
 
-  // lodash from npm
-  element.innerHTML = _.join(["Hello", "Dima Mogilevi lalallalalala"], " ");
-  element.classList.add("hello");
-  const obj = { lera: "lala", lera1: "bee" };
-  console.log("some", { ...obj });
-  var myIcon = new Image();
-  myIcon.src = Icon;
-  element.appendChild(myIcon);
+// import _ from "lodash";
+// import "./style.css";
+// import Icon from "./icon.png";
 
-  return element;
-}
+// function component() {
+//   var element = document.createElement("div");
 
-document.body.appendChild(component());
+//   // lodash from npm
+//   element.innerHTML = _.join(["Hello", "Dima Mogilevi lalallalalala"], " ");
+//   element.classList.add("hello");
+//   const obj = { lera: "lala", lera1: "bee" };
+//   console.log("some", { ...obj });
+//   var myIcon = new Image();
+//   myIcon.src = Icon;
+//   element.appendChild(myIcon);
+
+//   return element;
+// }
+
+// document.body.appendChild(component());
