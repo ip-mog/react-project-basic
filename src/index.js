@@ -8,7 +8,8 @@ function component() {
   // lodash from npm
   element.innerHTML = _.join(["Hello", "Dima Mogilevi lalallalalala"], " ");
   element.classList.add("hello");
-
+  const obj = { lera: "lala", lera1: "bee" };
+  console.log("some", { ...obj });
   var myIcon = new Image();
   myIcon.src = Icon;
   element.appendChild(myIcon);
