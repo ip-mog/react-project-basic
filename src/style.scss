@@ -1,6 +1,7 @@
 $color: red;
 
 .hello {
+  display: flex;
   color: $color;
   background: url("./icon.png");
 }
