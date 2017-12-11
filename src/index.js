@@ -3,17 +3,21 @@ import ReactDOM from "react-dom";
 import { createStore } from 'redux';
 import "./style.scss";
 
-const reducer = (state, action) => {
+const reducer = (state={}, action) => {
   switch (action.type) {
     case "add":
-      return state;
+      return {
+        ...state,
+        text: action.text,
+      }
     default:
       return state;
   }
 } 
-const store = createStore(reducer);
 
-ReactDOM.render(<div className="hello">hello everyone</div>, document.getElementById("root"));
+const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+
+ReactDOM.render(<button className="hello" onClick={() => store.dispatch({type: 'add', text: '123'})}>hello everyone</button>, document.getElementById("root"));
 
 // import _ from "lodash";
 // 
