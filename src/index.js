@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { createStore } from 'redux';
-import "./style.scss";
+import * as css from "./style.scss";
 
 const reducer = (state={}, action) => {
   switch (action.type) {
@@ -17,7 +17,7 @@ const reducer = (state={}, action) => {
 
 const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
-ReactDOM.render(<button className="hello" onClick={() => store.dispatch({type: 'add', text: '123'})}>hello everyone</button>, document.getElementById("root"));
+ReactDOM.render(<button className={css.hello} onClick={() => store.dispatch({type: 'add', text: '123'})}>hello everyone</button>, document.getElementById("root"));
 
 // import _ from "lodash";
 // 
