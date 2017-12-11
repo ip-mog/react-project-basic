@@ -1,2 +1,2 @@
 # react-project-basic
-Basic react project configuration.
+Basic react project configuration
