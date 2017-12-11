@@ -1,4 +1,6 @@
+$color: red;
+
 .hello {
-  color: red;
+  color: $color;
   background: url("./icon.png");
 }

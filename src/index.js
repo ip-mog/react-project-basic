@@ -1,10 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { createStore } from 'redux';
+import "./style.scss";
 
-ReactDOM.render(<div>hello everyone</div>, document.getElementById("root"));
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "add":
+      return state;
+    default:
+      return state;
+  }
+} 
+const store = createStore(reducer);
+
+ReactDOM.render(<div className="hello">hello everyone</div>, document.getElementById("root"));
 
 // import _ from "lodash";
-// import "./style.css";
+// 
 // import Icon from "./icon.png";
 
 // function component() {
